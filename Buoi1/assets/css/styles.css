@@ -1,0 +1,14 @@
+  /* CSS đảm bảo canvas chiếm toàn bộ màn hình */
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* CSS cho canvas để có kích thước toàn màn hình */
+#myCanvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}

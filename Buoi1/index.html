@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai1</title>
+</head>
+<body>
+    <canvas id= "myCanvas"></canvas>
+    <script>
+      const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Hàm thiết lập kích thước thực tế của canvas bằng với kích thước khung hình
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        // Thiết lập kích thước ban đầu và cập nhật khi thay đổi kích thước cửa sổ
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
+      
+        function drawRectangle() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); 
+            ctx.fillStyle = "red";
+            ctx.fillRect(50, 50, 200, 100);
+            
+        }
+
+        drawRectangle(); // Vẽ hình chữ nhật ban đầu
+    </script>
+</body>
+</html>
